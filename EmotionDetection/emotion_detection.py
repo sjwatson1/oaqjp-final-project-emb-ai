@@ -2,7 +2,7 @@ import requests
 import json
 
 def emotion_detector(text_to_analyse):
-    if not text_to_analyse.strip():  
+    if not text_to_analyse.strip(): 
         return None
 
     url = 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict'
