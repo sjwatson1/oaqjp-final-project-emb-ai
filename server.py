@@ -10,7 +10,7 @@ app =Flask("Emotion Detection")
 def emotion_detector_function():
     """Main function accepts user input from interface then returns emotion score"""
     text_to_analyze = request.args.get('textToAnalyze')
-    dominant_emotion = emotion_detection.emotion_detector(text_to_analyze)
+    dominant_emotion = emotion_detector(text_to_analyze)
     if dominant_emotion is None:
         return "Invalid text! Please try again!"
     anger = dominant_emotion['anger']
